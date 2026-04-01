@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
+
+  /* Background GIF */
+  background: url('disco.gif') no-repeat center center/cover;
+}
+
+/* Title */
+.title {
+  position: absolute;
+  top: 5%;
+  font-size: 4vw; /* smaller */
+  color: #ffffff;
+  letter-spacing: 2px; /* funky vibe */
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 15px #ffffff, 0 0 25px #ff00ff;
+  z-index: 2;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* funny/funky */
+}
+
+/* Subtitle */
+.subtitle {
+  position: absolute;
+  top: 15%; /* space between title and subtitle */
+  font-size: 2.5vw; /* smaller and readable */
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ff00ff;
+  z-index: 2;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+}
+
+/* Cat GIF */
+.cat {
+  width: 280px;
+  max-width: 80vw;
+  animation: slowDance 2s infinite ease-in-out;
+  z-index: 2;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Slow dance wiggle */
+@keyframes slowDance {
+  0% { transform: scale(1) rotate(-2deg); }
+  50% { transform: scale(1.05) rotate(2deg); }
+  100% { transform: scale(1) rotate(-2deg); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cat {
+    width: 200px;
+  }
+
+  .title {
+    font-size: 6vw;
+  }
+
+  .subtitle {
+    font-size: 4vw;
+  }
+}
