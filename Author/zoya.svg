@@ -1,0 +1,16 @@
+<svg viewBox="0 0 240 320" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="120" cy="170" r="145" fill="#1C1613" opacity="0.5"/>
+  <path d="M120,70 C100,55 78,60 70,85 C64,110 66,140 78,160 C82,175 80,195 74,215 C70,235 74,258 90,270"
+        fill="none" stroke="#C9A227" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M120,70 C140,72 152,85 150,100 C148,110 158,118 168,130 C172,136 168,142 160,144 C162,152 158,160 150,162 C152,170 146,178 136,180 C130,196 128,220 130,250 C132,270 126,285 108,292"
+        fill="none" stroke="#C9A227" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M144,90 Q150,86 158,89" fill="none" stroke="#C9A227" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="150" cy="99" r="2" fill="#C9A227"/>
+  <g>
+    <circle cx="118" cy="264" r="6" fill="none" stroke="#9B1B30" stroke-width="1.4"/>
+    <circle cx="125" cy="270" r="6" fill="none" stroke="#9B1B30" stroke-width="1.4"/>
+    <circle cx="118" cy="277" r="6" fill="none" stroke="#9B1B30" stroke-width="1.4"/>
+    <circle cx="111" cy="270" r="6" fill="none" stroke="#9B1B30" stroke-width="1.4"/>
+    <circle cx="118" cy="270" r="3" fill="#9B1B30"/>
+  </g>
+</svg>
