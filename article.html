@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pioneering a New Path at the Intersection of Technology and Art</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f0f0f;
+    --ink-soft: #3a3a3a;
+    --ink-muted: #6b6b6b;
+    --ink-faint: #999;
+    --paper: #fafaf8;
+    --paper-warm: #f4f2ee;
+    --accent: #c0392b;
+    --accent-light: #e8d5d2;
+    --divider: rgba(0,0,0,0.1);
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --max: 900px;
+    --col: 620px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #f0ede8;
+      --ink-soft: #ccc9c4;
+      --ink-muted: #999690;
+      --ink-faint: #666;
+      --paper: #111110;
+      --paper-warm: #191916;
+      --accent: #e05a4b;
+      --accent-light: #2a1a18;
+      --divider: rgba(255,255,255,0.1);
+    }
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--paper);
+    border-bottom: 1px solid var(--divider);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+  .nav-brand {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--accent);
+    width: 0%;
+    z-index: 200;
+    transition: width .05s linear;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5.5vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -.02em;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 540px;
+    margin: 0 auto 2.5rem;
+    font-weight: 300;
+    line-height: 1.65;
+  }
+  .meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+  .meta-row .sep { color: var(--divider); }
+  .author-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e8c4b8 0%, #c9a890 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b3d2e;
+    flex-shrink: 0;
+  }
+
+  /* ── HERO IMAGE BAND ── */
+  .hero-visual {
+    max-width: var(--max);
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .hero-art {
+    width: 100%;
+    height: clamp(220px, 40vw, 460px);
+    border-radius: 12px;
+    background: var(--paper-warm);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-art svg { width: 100%; height: 100%; }
+
+  /* ── ARTICLE BODY ── */
+  .article {
+    max-width: var(--col);
+    margin: 0 auto;
+    padding: 3.5rem 2rem 5rem;
+  }
+
+  .article p {
+    margin-bottom: 1.6rem;
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+  .article p:first-child { color: var(--ink); font-weight: 400; }
+
+  .drop-cap::first-letter {
+    font-family: var(--serif);
+    font-size: 5rem;
+    font-weight: 700;
+    float: left;
+    line-height: .8;
+    margin: .05em .12em -.05em 0;
+    color: var(--accent);
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.3rem, 3vw, 1.75rem);
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 2.5rem 0 1rem;
+    letter-spacing: -.015em;
+  }
+
+  .pull-quote {
+    margin: 3rem -1rem;
+    padding: 2rem 2rem 2rem 2.5rem;
+    border-left: 4px solid var(--accent);
+    background: var(--paper-warm);
+    border-radius: 0 8px 8px 0;
+  }
+  .pull-quote p {
+    font-family: var(--serif);
+    font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink) !important;
+    line-height: 1.5;
+    margin-bottom: .5rem;
+  }
+  .pull-quote cite {
+    font-size: 12px;
+    font-style: normal;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1px;
+    background: var(--divider);
+    border: 1px solid var(--divider);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 2.5rem 0;
+  }
+  .stat-cell {
+    background: var(--paper);
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    display: block;
+    margin-bottom: .25rem;
+  }
+  .stat-label {
+    font-size: 11.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--divider);
+    margin: 2.5rem 0;
+  }
+
+  .highlight-box {
+    background: var(--accent-light);
+    border-radius: 10px;
+    padding: 1.75rem;
+    margin: 2.5rem 0;
+  }
+  .highlight-box p {
+    margin-bottom: 0;
+    font-size: .95rem;
+    color: var(--ink-soft) !important;
+    font-weight: 400 !important;
+  }
+  .highlight-box strong { color: var(--ink); font-weight: 600; }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--divider);
+  }
+  .tag {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .06em;
+    padding: 5px 12px;
+    border-radius: 100px;
+    background: var(--paper-warm);
+    color: var(--ink-soft);
+    border: 1px solid var(--divider);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--divider);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    nav { padding: 0 1rem; }
+    .hero { padding: 3.5rem 1.25rem 2.5rem; }
+    .hero-visual { padding: 0 1.25rem; }
+    .article { padding: 2.5rem 1.25rem 4rem; }
+    .pull-quote { margin: 2.5rem -.25rem; }
+    .drop-cap::first-letter { font-size: 4rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<nav>
+  <a class="nav-brand" href="#">The Feature</a>
+  <span class="nav-tag">Tech &amp; Art</span>
+</nav>
+
+<header class="hero">
+  <span class="eyebrow">Featured Story</span>
+  <h1>Pioneering a New Path at the <em>Intersection</em> of Technology and Art</h1>
+  <p class="hero-sub">What happens when a coder picks up a paintbrush — or when an artist writes her first line of code? One creator is finding out.</p>
+  <div class="meta-row">
+    <div class="author-chip">
+      <div class="avatar">AM</div>
+      <span>By <strong>Ayat Mughal</strong></span>
+    </div>
+    <span class="sep">·</span>
+    <span>June 2025</span>
+    <span class="sep">·</span>
+    <span>7 min read</span>
+  </div>
+</header>
+
+<div class="hero-visual">
+  <div class="hero-art">
+    <!-- Generative SVG illustration: circuits meeting brush strokes -->
+    <svg viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <style>
+          .bg { fill: #f0ece4; }
+          @media (prefers-color-scheme: dark) { .bg { fill: #1a1814; } }
+          .node { fill: none; stroke: #c0392b; stroke-width: 1.5; opacity: .6; }
+          .wire { fill: none; stroke: #888; stroke-width: 1; opacity: .3; }
+          .brush { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+        </style>
+      </defs>
+      <rect class="bg" width="900" height="460" />
+
+      <!-- Background grid wires - left (tech side) -->
+      <g class="wire" opacity=".25">
+        <line x1="0" y1="80" x2="420" y2="80"/>
+        <line x1="0" y1="160" x2="420" y2="160"/>
+        <line x1="0" y1="240" x2="420" y2="240"/>
+        <line x1="0" y1="320" x2="420" y2="320"/>
+        <line x1="0" y1="400" x2="420" y2="400"/>
+        <line x1="80" y1="0" x2="80" y2="460"/>
+        <line x1="160" y1="0" x2="160" y2="460"/>
+        <line x1="240" y1="0" x2="240" y2="460"/>
+        <line x1="320" y1="0" x2="320" y2="460"/>
+        <line x1="400" y1="0" x2="400" y2="460"/>
+      </g>
+
+      <!-- Circuit nodes -->
+      <g class="node">
+        <circle cx="80" cy="80" r="5"/><circle cx="80" cy="160" r="5"/><circle cx="80" cy="240" r="5"/>
+        <circle cx="160" cy="80" r="5"/><circle cx="160" cy="240" r="5"/><circle cx="160" cy="320" r="5"/>
+        <circle cx="240" cy="160" r="5"/><circle cx="240" cy="240" r="5"/><circle cx="240" cy="400" r="5"/>
+        <circle cx="320" cy="80" r="5"/><circle cx="320" cy="320" r="5"/>
+        <circle cx="400" cy="160" r="5"/><circle cx="400" cy="320" r="5"/>
+        <rect x="145" y="225" width="30" height="30" rx="3"/>
+        <rect x="225" y="145" width="30" height="30" rx="3"/>
+        <rect x="305" y="65" width="30" height="30" rx="3"/>
+      </g>
+
+      <!-- Dividing curve (the "blend zone") -->
+      <path d="M430 0 C470 100, 440 200, 460 310 S490 420, 470 460" fill="none" stroke="#c0392b" stroke-width="2" opacity=".4"/>
+
+      <!-- Brush strokes - right (art side) -->
+      <g class="brush">
+        <path d="M490 80 Q560 60, 640 100 T800 90" stroke="#d4856a" stroke-width="18" opacity=".35"/>
+        <path d="M530 160 Q610 140, 700 180 T860 155" stroke="#a0522d" stroke-width="12" opacity=".3"/>
+        <path d="M510 260 Q590 230, 680 270 T880 250" stroke="#c0392b" stroke-width="22" opacity=".22"/>
+        <path d="M480 340 Q570 310, 660 360 T850 330" stroke="#8b1a1a" stroke-width="16" opacity=".28"/>
+        <path d="M550 420 Q640 395, 740 430 T900 415" stroke="#d4856a" stroke-width="10" opacity=".2"/>
+      </g>
+
+      <!-- Center accent: merging symbol -->
+      <g transform="translate(445,230)" opacity=".85">
+        <circle cx="0" cy="0" r="22" fill="#c0392b" opacity=".15"/>
+        <circle cx="0" cy="0" r="14" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+        <!-- left half circuit icon -->
+        <line x1="-14" y1="0" x2="-6" y2="0" stroke="#888" stroke-width="1.5"/>
+        <line x1="-6" y1="-5" x2="-6" y2="5" stroke="#888" stroke-width="1.5"/>
+        <!-- right half brush stroke icon -->
+        <path d="M4 -5 Q10 0, 4 5" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<article class="article">
+
+  <p class="drop-cap">There is a particular kind of restlessness that strikes people who are very good at one thing and can't stop wondering about another. For years, Ayat Mughal moved confidently through the world of technology — writing code, solving systems-level problems, understanding machines. But she kept returning to a question she couldn't algorithmically resolve: <em>what is it that art can do that software cannot?</em></p>
+
+  <p>That question, deceptively simple, eventually became the blueprint for an entirely new way of working. Today, Mughal occupies a rare position at the vanguard of a growing movement: creators who refuse to choose between the digital and the handmade, the computational and the expressive, the optimized and the beautifully impractical.</p>
+
+  <div class="stat-grid">
+    <div class="stat-cell"><span class="stat-num">7+</span><span class="stat-label">Years in tech</span></div>
+    <div class="stat-cell"><span class="stat-num">3</span><span class="stat-label">Creative disciplines</span></div>
+    <div class="stat-cell"><span class="stat-num">∞</span><span class="stat-label">Experiments</span></div>
+    <div class="stat-cell"><span class="stat-cell stat-num">1</span><span class="stat-label">Unified vision</span></div>
+  </div>
+
+  <h2>When the Algorithm Meets the Canvas</h2>
+
+  <p>The idea that technology and art are opposed is one of the great false dichotomies of our time. Leonardo da Vinci was obsessed with engineering. Andy Warhol ran a factory. The first computer programs were written by a woman, Ada Lovelace, who described her method as "poetical science." The separation between the two was always more cultural myth than lived reality.</p>
+
+  <p>Still, institutions tend to enforce the divide. Schools funnel students early: STEM or humanities, code or canvas. Mughal straddled both long enough to realize the most interesting territory was in the gap between them.</p>
+
+  <div class="pull-quote">
+    <p>"The most interesting questions live exactly where the tools run out — where the code can't tell you what to make, only how to make it."</p>
+    <cite>Ayat Mughal</cite>
+  </div>
+
+  <p>That tension — between the prescriptive logic of a program and the ambiguous freedom of creative practice — is where her work finds its energy. She builds generative systems that produce visual output, then intervenes by hand. She writes algorithms that don't fully determine their own results. She leaves space for accident inside systems designed to prevent it.</p>
+
+  <h2>The Tools Are Not the Work</h2>
+
+  <p>One of the persistent misunderstandings about tech-adjacent art is the assumption that the technology <em>is</em> the art — that because something was made with code, the code is what we should admire. Mughal is firm on this point: tools are means, not ends. The sophistication of the method matters only insofar as it serves the thing being made.</p>
+
+  <div class="highlight-box">
+    <p><strong>On creative process:</strong> Mughal's approach typically begins with a constraint — a rule she sets for herself that the work must follow — and then spends the rest of the process finding out where the rule breaks down. The violation, she says, is usually where the most interesting work lives.</p>
+  </div>
+
+  <p>This is, of course, a thoroughly artistic sensibility applied to a technical process. Rules in software engineering exist to produce reliable, predictable outcomes. Rules in art often exist to be productively broken. Mughal operates in the space between those two philosophies, using the rigidity of code to set up conditions for something genuinely unexpected to emerge.</p>
+
+  <hr class="divider" />
+
+  <h2>Why This Moment Matters</h2>
+
+  <p>We are living through an era in which the tools available to artists have never been more powerful, more accessible, or more varied. Machine learning, generative models, accessible design software, open-source creative coding libraries — the infrastructure that once required institutional resources is now available to anyone with a laptop and an internet connection.</p>
+
+  <p>This democratization is still working itself out. Who gets to be called a technologist? Who gets to be called an artist? Those categories are loosening, and the loosening is producing new kinds of practitioners who don't fit neatly into either box. Mughal is one of them — part of a cohort defining what creative practice looks like when the old walls come down.</p>
+
+  <p>The work that results isn't always legible to either camp. Technologists sometimes find it insufficiently rigorous. Art world figures sometimes find it too procedural. But that ambiguity might be precisely the point. The most generative ideas often live where established frameworks don't quite apply.</p>
+
+  <div class="pull-quote">
+    <p>"If everyone who sees your work immediately knows what to call it, you may not have made anything new."</p>
+    <cite>Ayat Mughal</cite>
+  </div>
+
+  <h2>What Comes Next</h2>
+
+  <p>Mughal is characteristically reluctant to describe what she is building toward. The goal, she says, is not a destination but a practice — a way of working that stays genuinely curious, that doesn't collapse into a style or a brand or a repeatable method. The restlessness that started all of this is, she hopes, the thing she never resolves.</p>
+
+  <p>In an industry obsessed with scaling, optimizing, and systematizing, there is something quietly radical about insisting that the best work comes from staying in the uncomfortable middle — from refusing to let the machine think for you, and refusing to pretend the machine doesn't matter.</p>
+
+  <p>That is the path she is pioneering. It doesn't have a name yet. That, perhaps, is the point.</p>
+
+  <div class="tags">
+    <span class="tag">Technology</span>
+    <span class="tag">Art &amp; Design</span>
+    <span class="tag">Creative Practice</span>
+    <span class="tag">Generative Art</span>
+    <span class="tag">Innovation</span>
+    <span class="tag">Future of Work</span>
+  </div>
+
+</article>
+
+<footer>
+  <p>Written by <a href="#">Ayat Mughal</a> &nbsp;·&nbsp; Published June 2025</p>
+</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const total = document.body.scrollHeight - window.innerHeight;
+    const pct = total > 0 ? (window.scrollY / total) * 100 : 0;
+    bar.style.width = pct + '%';
+  });
+</script>
+</body>
+</html>
