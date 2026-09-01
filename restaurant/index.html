@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fennel & Ash — All-Day Bistro</title>
+<meta name="description" content="Fennel & Ash is a neighborhood bistro serving coffee through dinner, built around wood-fired mains, seasonal produce, and a short natural wine list.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500;1,9..144,600&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">Fennel &amp; Ash</a>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+    </ul>
+    <a href="reservations.html" class="nav-cta">Reserve a table</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Coffee at 8 — last table at 10</span>
+      <h1>Slow food,<br>quick coffee.</h1>
+      <p class="lede">An all-day neighborhood bistro built around wood-fired mains, seasonal produce, and a short list of natural wine. Same kitchen from morning coffee to the last table.</p>
+      <div class="hero-ctas">
+        <a href="reservations.html" class="btn primary">Reserve a table →</a>
+        <a href="menu.html" class="btn">View the menu</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>Hours</strong>8am – 10pm daily</div>
+        <div><strong>Location</strong>412 Alder Street</div>
+        <div><strong>Phone</strong>(503) 555-0139</div>
+      </div>
+    </div>
+    <div class="hero-3d" id="hero-canvas">
+      <span class="hint">Drag to turn the plate</span>
+      <div class="fallback-note">3D view unavailable — tonight's plate, wood-fired and finished with herb oil.</div>
+    </div>
+  </div>
+</header>
+
+<section aria-labelledby="dishes-heading">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">From the kitchen</span>
+        <h2 id="dishes-heading">A few things we're known for</h2>
+      </div>
+      <p class="section-note">Full menu, including dietary tags, on the Menu page.</p>
+    </div>
+    <div class="dish-grid">
+      <article class="dish-tile reveal">
+        <img src="espresso.jpg" alt="Illustration of an espresso with steam" loading="lazy">
+        <div class="cap"><h4>House Espresso</h4><span class="tag">All day</span></div>
+      </article>
+      <article class="dish-tile reveal">
+        <img src="steak.jpg" alt="Illustration of a wood-fired plated main" loading="lazy">
+        <div class="cap"><h4>Wood-Fired Trout</h4><span class="tag">Dinner</span></div>
+      </article>
+      <article class="dish-tile reveal">
+        <img src="salad.jpg" alt="Illustration of a seasonal salad bowl" loading="lazy">
+        <div class="cap"><h4>Charred Radicchio</h4><span class="tag">Lunch &amp; Dinner</span></div>
+      </article>
+      <article class="dish-tile reveal">
+        <img src="criossant.jpg" alt="Illustration of a fresh croissant" loading="lazy">
+        <div class="cap"><h4>Morning Pastries</h4><span class="tag">Until 11am</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="on-forest" aria-labelledby="quote-heading">
+  <div class="wrap">
+    <span class="eyebrow">From our regulars</span>
+    <blockquote class="quote-block" style="margin-top:16px; color:var(--paper);">
+      "The kind of place where the coffee is as considered as the dinner menu — I've never had a bad plate here, morning or night."
+      <cite style="color:#C9D6C4;">— Portland Monthly, Neighborhood Favorites 2025</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section aria-labelledby="hours-heading">
+  <div class="wrap" style="display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;">
+    <div>
+      <span class="eyebrow">Visit us</span>
+      <h2 id="hours-heading" style="margin-top:10px; font-size:2rem;">One kitchen, all day.</h2>
+      <p style="margin-top:16px; color:var(--ink-soft); max-width:420px;">Coffee and pastries from 8, a full lunch menu at 11:30, and dinner service starting at 5 — the same kitchen, the same care, whatever time you walk in.</p>
+      <a href="reservations.html" class="btn primary" style="margin-top:20px;">Reserve a table →</a>
+    </div>
+    <ul class="hours-list">
+      <li><span class="day">Monday – Thursday</span><span>8am – 9pm</span></li>
+      <li><span class="day">Friday – Saturday</span><span>8am – 10pm</span></li>
+      <li><span class="day">Sunday</span><span>9am – 3pm</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="font-size:1.3rem; color:var(--paper);">Fennel &amp; Ash</a>
+        <p style="margin-top:14px; max-width:280px; opacity:0.85; font-size:0.92rem;">An all-day neighborhood bistro — coffee through dinner, one kitchen.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>412 Alder Street</li>
+          <li>(503) 555-0139</li>
+          <li><a href="mailto:hello@fennelandash.co">hello@fennelandash.co</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fennel &amp; Ash.</span>
+      <span>Fictional restaurant — portfolio demonstration project.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

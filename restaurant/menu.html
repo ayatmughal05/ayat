@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — Fennel & Ash</title>
+<meta name="description" content="Full menu for Fennel & Ash — coffee, lunch, dinner, and wine, with dietary tags.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500;1,9..144,600&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">Fennel &amp; Ash</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" aria-current="page">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+    </ul>
+    <a href="reservations.html" class="nav-cta">Reserve a table</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="wrap">
+    <span class="eyebrow">Menu — updated seasonally</span>
+    <h1>Coffee through dinner.</h1>
+    <p class="lede">One kitchen, four menus. <span class="diet-tag v" style="margin-left:6px;">V</span> vegetarian &nbsp; <span class="diet-tag gf">GF</span> gluten-free available on request.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="menu-tabs">
+      <button class="menu-tab active" data-panel="panel-coffee">Coffee &amp; Morning</button>
+      <button class="menu-tab" data-panel="panel-lunch">Lunch</button>
+      <button class="menu-tab" data-panel="panel-dinner">Dinner</button>
+      <button class="menu-tab" data-panel="panel-wine">Wine &amp; Bar</button>
+    </div>
+
+    <div class="menu-card">
+      <div class="torn-edge"></div>
+
+      <div class="menu-panel active" id="panel-coffee">
+        <div class="menu-section-title">Coffee &amp; Morning <span style="font-family:var(--mono); font-size:0.7rem; color:var(--ink-soft); font-style:normal;">until 11am</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>House Espresso</h4><span class="diet-tags"><span class="diet-tag v">V</span></span><span class="desc">Single or double, house blend roasted weekly.</span></div><span class="price">$3.50</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Oat Milk Cortado</h4><span class="diet-tags"><span class="diet-tag v">V</span></span><span class="desc">Equal parts espresso and steamed oat milk.</span></div><span class="price">$4.75</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Pour Over</h4><span class="diet-tags"><span class="diet-tag v">V</span><span class="diet-tag gf">GF</span></span><span class="desc">Rotating single-origin, brewed to order.</span></div><span class="price">$5.50</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Butter Croissant</h4><span class="diet-tags"><span class="diet-tag v">V</span></span><span class="desc">Baked in-house each morning.</span></div><span class="price">$4.25</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Shakshuka</h4><span class="diet-tags"><span class="diet-tag v">V</span><span class="diet-tag gf">GF</span></span><span class="desc">Two eggs poached in spiced tomato, grilled sourdough.</span></div><span class="price">$14</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Ricotta Toast</h4><span class="diet-tags"><span class="diet-tag v">V</span></span><span class="desc">Whipped ricotta, seasonal fruit, honey, sea salt.</span></div><span class="price">$12</span></div>
+      </div>
+
+      <div class="menu-panel" id="panel-lunch">
+        <div class="menu-section-title">Lunch <span style="font-family:var(--mono); font-size:0.7rem; color:var(--ink-soft); font-style:normal;">11:30 – 4</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Charred Radicchio Salad</h4><span class="diet-tags"><span class="diet-tag v">V</span><span class="diet-tag gf">GF</span></span><span class="desc">Charred radicchio, pear, walnut, aged pecorino, honey vinaigrette.</span></div><span class="price">$16</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Grain Bowl</h4><span class="diet-tags"><span class="diet-tag v">V</span></span><span class="desc">Farro, roasted squash, kale, tahini, pickled onion.</span></div><span class="price">$17</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Roast Chicken Sandwich</h4><span class="desc">Herb-roasted chicken, arugula, aioli, ciabatta.</span></div><span class="price">$18</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Wood-Fired Flatbread</h4><span class="diet-tags"><span class="diet-tag v">V</span></span><span class="desc">Seasonal vegetables, whipped ricotta, chili oil.</span></div><span class="price">$19</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Soup of the Day</h4><span class="diet-tags"><span class="diet-tag gf">GF</span></span><span class="desc">Ask your server — changes daily with the market.</span></div><span class="price">$9</span></div>
+      </div>
+
+      <div class="menu-panel" id="panel-dinner">
+        <div class="menu-section-title">Dinner <span style="font-family:var(--mono); font-size:0.7rem; color:var(--ink-soft); font-style:normal;">from 5pm</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Wood-Fired Trout</h4><span class="diet-tags"><span class="diet-tag gf">GF</span></span><span class="desc">Whole trout, herb oil, charred lemon, fingerling potatoes.</span></div><span class="price">$29</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Braised Short Rib</h4><span class="diet-tags"><span class="diet-tag gf">GF</span></span><span class="desc">Red wine braise, celery root purée, gremolata.</span></div><span class="price">$34</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Mushroom Agnolotti</h4><span class="diet-tags"><span class="diet-tag v">V</span></span><span class="desc">House-made pasta, wild mushroom, brown butter, sage.</span></div><span class="price">$26</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Roasted Half Chicken</h4><span class="diet-tags"><span class="diet-tag gf">GF</span></span><span class="desc">Dry-brined, wood-fired, pan jus, roasted seasonal vegetables.</span></div><span class="price">$28</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Charred Eggplant</h4><span class="diet-tags"><span class="diet-tag v">V</span><span class="diet-tag gf">GF</span></span><span class="desc">Whole roasted eggplant, tahini, pomegranate, herb oil.</span></div><span class="price">$22</span></div>
+      </div>
+
+      <div class="menu-panel" id="panel-wine">
+        <div class="menu-section-title">Wine &amp; Bar</div>
+        <div class="menu-item"><div class="mi-left"><h4>House Red</h4><span class="desc">Rotating natural red, glass or bottle.</span></div><span class="price">$12 / $46</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>House White</h4><span class="desc">Rotating natural white, glass or bottle.</span></div><span class="price">$12 / $46</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Pét-Nat</h4><span class="desc">Lightly sparkling, dry, by the glass.</span></div><span class="price">$14</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Local Draft Beer</h4><span class="desc">Rotating tap, ask your server.</span></div><span class="price">$8</span></div>
+        <div class="menu-item"><div class="mi-left"><h4>Non-Alcoholic Spritz</h4><span class="diet-tags"><span class="diet-tag v">V</span></span><span class="desc">Bitter aperitivo style, soda, citrus.</span></div><span class="price">$9</span></div>
+      </div>
+
+      <div class="torn-edge" style="transform:rotate(180deg);"></div>
+    </div>
+  </div>
+</section>
+
+<section class="on-forest" style="text-align:center;">
+  <div class="wrap">
+    <span class="eyebrow">Ready to eat?</span>
+    <h2 style="margin-top:10px;">Reserve a table for tonight.</h2>
+    <a href="reservations.html" class="btn primary" style="margin-top:22px;">Reserve a table →</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="font-size:1.3rem; color:var(--paper);">Fennel &amp; Ash</a>
+        <p style="margin-top:14px; max-width:280px; opacity:0.85; font-size:0.92rem;">An all-day neighborhood bistro — coffee through dinner, one kitchen.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>412 Alder Street</li>
+          <li>(503) 555-0139</li>
+          <li><a href="mailto:hello@fennelandash.co">hello@fennelandash.co</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fennel &amp; Ash.</span>
+      <span>Fictional restaurant — portfolio demonstration project.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

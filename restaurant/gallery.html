@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Fennel & Ash</title>
+<meta name="description" content="A look at the dishes, drinks, and dining room at Fennel & Ash.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500;1,9..144,600&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">Fennel &amp; Ash</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+    </ul>
+    <a href="reservations.html" class="nav-cta">Reserve a table</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="wrap">
+    <span class="eyebrow">Gallery</span>
+    <h1>A look inside.</h1>
+    <p class="lede">Illustrated studies of what comes out of the kitchen and off the bar — click any piece for a closer look.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="gallery-grid">
+      <div class="gallery-item" data-caption="House Espresso — pulled to order, all day">
+        <img src="espresso.jpg" alt="Illustration of an espresso with steam">
+        <span class="label">House Espresso</span>
+      </div>
+      <div class="gallery-item" data-caption="Wood-Fired Trout — herb oil, charred lemon">
+        <img src="steak.jpg" alt="Illustration of a wood-fired plated main">
+        <span class="label">Wood-Fired Trout</span>
+      </div>
+      <div class="gallery-item" data-caption="Morning Pastries — baked in-house each morning">
+        <img src="criossant.jpg" alt="Illustration of a fresh croissant">
+        <span class="label">Morning Pastries</span>
+      </div>
+      <div class="gallery-item" data-caption="Charred Radicchio Salad — pear, walnut, pecorino">
+        <img src="salad.jpg" alt="Illustration of a seasonal salad bowl">
+        <span class="label">Charred Radicchio</span>
+      </div>
+      <div class="gallery-item" data-caption="House Wine — rotating natural list, glass or bottle">
+        <img src="wine.jpg" alt="Illustration of a glass of wine">
+        <span class="label">House Wine</span>
+      </div>
+      <div class="gallery-item" data-caption="The Dining Room — table setting, evening service">
+        <img src="table.jpg" alt="Illustration of a table setting">
+        <span class="label">Dining Room</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="on-forest" style="text-align:center;">
+  <div class="wrap">
+    <span class="eyebrow">Seen enough?</span>
+    <h2 style="margin-top:10px;">Come taste it in person.</h2>
+    <a href="reservations.html" class="btn primary" style="margin-top:22px;">Reserve a table →</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="font-size:1.3rem; color:var(--paper);">Fennel &amp; Ash</a>
+        <p style="margin-top:14px; max-width:280px; opacity:0.85; font-size:0.92rem;">An all-day neighborhood bistro — coffee through dinner, one kitchen.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>412 Alder Street</li>
+          <li>(503) 555-0139</li>
+          <li><a href="mailto:hello@fennelandash.co">hello@fennelandash.co</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fennel &amp; Ash.</span>
+      <span>Fictional restaurant — portfolio demonstration project.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox-backdrop" id="lightbox-backdrop">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+  <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">‹</button>
+  <button class="lightbox-next" id="lightbox-next" aria-label="Next">›</button>
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
